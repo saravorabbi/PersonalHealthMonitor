@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Personal Health Monitor</string>
+
+    <string name="no_report">no report</string>
+</resources>
