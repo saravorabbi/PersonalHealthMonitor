@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewInfoActivity">
+    <!--android:gravity="center" -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" >
+
+        <EditText
+            android:id="@+id/new_temperatura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Temperatura"/>
+
+        <EditText
+            android:id="@+id/new_pressione_sistolica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Pressione Sistolica"/>
+
+        <EditText
+            android:id="@+id/new_pressione_diastolica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Pressione Diastolica"/>
+
+        <EditText
+            android:id="@+id/new_glicemia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Indice Glicemico"/>
+
+        <EditText
+            android:id="@+id/new_peso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Peso"/>
+
+        <EditText
+            android:id="@+id/new_nota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nota" />
+
+        <Button
+            android:id="@+id/saveNewReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salva" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
