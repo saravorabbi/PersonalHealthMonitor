@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Personal Health Monitor</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Diario</string>
+    <string name="title_statistiche">Statistiche</string>
+
+    <string name="no_report">Non ci sono report</string>
+    <string name="prompt_NuovoReport">Inserisci un nuovo report</string>
+    <string name="prompt_battito">Battito cardiaco</string>
+    <string name="prompt_pressione">Pressione sanguigna</string>
+    <string name="prompt_temperatura">Temperatura corporea</string>
+    <string name="prompt_glicemia">Indice glicemico</string>
+    <string name="prompt_note">Altre informazioni</string>
+    <string name="prompt_BTNNuovoReport">Aggiungi</string>
+    <string name="prompt_imgdelete">IMGDelete</string>
+    <string name="prompt_imgedit">IMGEdit</string>
+    <string name="prompt_imgbattito">IMGBattito</string>
+    <string name="prompt_EditReport">Modifica report</string>
+    <string name="prompt_BTNEditReport">Aggiorna i dati</string>
+    <string name="prompt_TodayReport">"Report del "</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="prompt_giorno">GIORNO</string>
+    <string name="app_EditReport">Modifica Report</string>
+    <string name="app_NewReport">Nuovo Report</string>
+    <string name="title_diario">Diario</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+</resources>

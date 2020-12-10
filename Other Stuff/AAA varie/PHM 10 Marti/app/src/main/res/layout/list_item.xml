@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp"
+    card_view:cardBackgroundColor="@color/cardview_light_background"
+    card_view:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/TXVdate_stock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Report aggiunto il "
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/TXVdate_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19/10/2020 alle 15:00" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/IMGBattito"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="#FFFFFF"
+                        android:contentDescription="@string/prompt_imgbattito"
+                        android:src="@drawable/imgbattito"/>
+
+                    <TextView
+                        android:id="@+id/TXVbattito"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="BC" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/IMGPressione"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="@string/prompt_imgbattito"
+                        android:src="@drawable/imgpressione"/>
+
+                    <TextView
+                        android:id="@+id/TXVpressione"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="PS" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="4"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/IMGtemperatura"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="@string/prompt_imgbattito"
+                        android:src="@drawable/imgtemperatura"/>
+
+                    <TextView
+                        android:id="@+id/TXVtemperatura"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="TM" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="4"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/IMGglicemia"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="@string/prompt_imgbattito"
+                        android:src="@drawable/imgglicemia"/>
+
+                    <TextView
+                        android:id="@+id/TXVglicemia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="IG" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/TXVnote_stock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Note: "
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/TXVnote_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Altre info" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/IMGDelete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="7dp"
+                android:layout_weight="2"
+                android:contentDescription="@string/prompt_imgdelete"
+                card_view:srcCompat="@android:drawable/ic_menu_delete"
+                card_view:tint="#9E9E9E" />
+
+            <ImageView
+                android:id="@+id/IMGEdit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="7dp"
+                android:layout_weight="2"
+                android:contentDescription="@string/prompt_imgedit"
+                card_view:srcCompat="@android:drawable/ic_menu_edit"
+                card_view:tint="#9E9E9E" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
