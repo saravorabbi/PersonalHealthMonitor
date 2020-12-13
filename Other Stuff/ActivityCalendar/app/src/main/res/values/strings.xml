@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">ActivityCalendar</string>
-    <string name="calendario">Calendario</string>
-    <string name="sei_nel_calendario">Sei nel calendario!!</string>
-    <string name="go_to_calendar">Go to calendar</string>
-    <string name="date">Date</string>
-    <string name="textview">TextView</string>
-    <string name="qui_la_data">Qui la data</string>
-</resources>
