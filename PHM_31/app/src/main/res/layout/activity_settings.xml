@@ -1,0 +1,896 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notifiche"
+                    android:textStyle="bold"
+                    android:textSize="17sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Daily notifications "
+                        android:textSize="18sp"
+                        android:padding="10dp"/>
+
+                    <ToggleButton
+                        android:id="@+id/toggleButton_notifiche"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="ToggleButton" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_time_notifiche"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Seleziona l'orario di notifica:  "
+                        android:textSize="17sp"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:id="@+id/time_notifiche"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="09:00"
+                        android:textSize="17sp"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/darker_gray"/>
+
+            <!-- PREFERENZE DI MONOTORAGGIO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preferenze di monitoraggio"
+                    android:textStyle="bold"
+                    android:textSize="17sp"/>
+
+                <!-- TEMPERATURA -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Temperatura"
+                            android:textSize="18dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <!-- android:progress="1" -->
+                            <SeekBar
+                                android:id="@+id/temperatura_setting"
+                                android:layout_width="400dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:min="1"
+                                android:max="5"
+
+                                android:padding="10dp"/>
+
+                            <TextView
+                                android:id="@+id/temp_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textSize="15sp"
+                                android:padding="10dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearTemperatura"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Compreso fra: "
+                                android:textSize="17dp"
+                                android:padding="10dp"/>
+
+                            <EditText
+                                android:id="@+id/temp_lower_bound"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" e "
+                                android:textSize="17dp"/>
+                            <EditText
+                                android:id="@+id/temp_upper_bound"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Monitora la temperatura "
+                                android:textSize="17dp"
+                                android:padding="10dp"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                >
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="da "
+                                        android:textSize="17dp"/>
+
+                                    <TextView
+                                        android:id="@+id/temp_begin_date"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="dd/mm/yyy"
+                                        android:textSize="17dp"
+                                        android:padding="10dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="  a "
+                                        android:textSize="17dp"/>
+
+                                    <TextView
+                                        android:id="@+id/temp_end_date"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="dd/mm/yyy"
+                                        android:textSize="17dp"
+                                        android:padding="10dp"
+                                        />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <!-- PRESSIONE SISTOLICA -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pressione Sistolica"
+                            android:textSize="18dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <!-- android:progress="1" -->
+                            <SeekBar
+                                android:id="@+id/pressione_sistolica_setting"
+                                android:layout_width="400dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:min="1"
+                                android:max="5"
+
+                                android:padding="10dp"/>
+
+                            <TextView
+                                android:id="@+id/press_sis_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textSize="15sp"
+                                android:padding="10dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearPressioneSistolica"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Compreso fra: "
+                                android:textSize="17dp"
+                                android:padding="10dp"/>
+
+                            <EditText
+                                android:id="@+id/press_sis_lower_bound"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" e "
+                                android:textSize="17dp"/>
+                            <EditText
+                                android:id="@+id/press_sis_upper_bound"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Monitora la pressione \nsistolica"
+                                android:textSize="17dp"
+                                android:padding="10dp"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                >
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="da "
+                                        android:textSize="17dp"/>
+
+                                    <TextView
+                                        android:id="@+id/press_sis_begin_date"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="dd/mm/yyy"
+                                        android:textSize="17dp"
+                                        android:padding="10dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="  a "
+                                        android:textSize="17dp"/>
+
+                                    <TextView
+                                        android:id="@+id/press_sis_end_date"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="dd/mm/yyy"
+                                        android:textSize="17dp"
+                                        android:padding="10dp"
+                                        />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <!-- PRESSIONE DIASTOLICA -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pressione Diastolica"
+                            android:textSize="18dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <!-- android:progress="1" -->
+                            <SeekBar
+                                android:id="@+id/pressione_diastolica_setting"
+                                android:layout_width="400dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:min="1"
+                                android:max="5"
+
+                                android:padding="10dp"/>
+
+                            <TextView
+                                android:id="@+id/press_dia_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textSize="15sp"
+                                android:padding="10dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearPressioneDiastolica"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Compreso fra: "
+                                android:textSize="17dp"
+                                android:padding="10dp"/>
+
+                            <EditText
+                                android:id="@+id/press_dia_lower_bound"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" e "
+                                android:textSize="17dp"/>
+                            <EditText
+                                android:id="@+id/press_dia_upper_bound"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Monitora la pressione \ndiastolica"
+                                android:textSize="17dp"
+                                android:padding="10dp"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                >
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="da "
+                                        android:textSize="17dp"/>
+
+                                    <TextView
+                                        android:id="@+id/press_dia_begin_date"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="dd/mm/yyy"
+                                        android:textSize="17dp"
+                                        android:padding="10dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="  a "
+                                        android:textSize="17dp"/>
+
+                                    <TextView
+                                        android:id="@+id/press_dia_end_date"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="dd/mm/yyy"
+                                        android:textSize="17dp"
+                                        android:padding="10dp"
+                                        />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <!-- GLICEMIA -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Glicemia"
+                            android:textSize="18dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <!-- android:progress="1" -->
+                            <SeekBar
+                                android:id="@+id/glicemia_setting"
+                                android:layout_width="400dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:min="1"
+                                android:max="5"
+
+                                android:padding="10dp"/>
+
+                            <TextView
+                                android:id="@+id/glic_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textSize="15sp"
+                                android:padding="10dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearGlicemia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Compreso fra: "
+                                android:textSize="17dp"
+                                android:padding="10dp"/>
+
+                            <EditText
+                                android:id="@+id/glic_lower_bound"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" e "
+                                android:textSize="17dp"/>
+                            <EditText
+                                android:id="@+id/glic_upper_bound"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Monitora la glicemia "
+                                android:textSize="17dp"
+                                android:padding="10dp"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                >
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="da "
+                                        android:textSize="17dp"/>
+
+                                    <TextView
+                                        android:id="@+id/glic_begin_date"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="dd/mm/yyy"
+                                        android:textSize="17dp"
+                                        android:padding="10dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="  a "
+                                        android:textSize="17dp"/>
+
+                                    <TextView
+                                        android:id="@+id/glic_end_date"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="dd/mm/yyy"
+                                        android:textSize="17dp"
+                                        android:padding="10dp"
+                                        />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/darker_gray"/>
+
+
+                <!-- PESO -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Peso"
+                            android:textSize="18dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <!-- android:progress="1" -->
+                            <SeekBar
+                                android:id="@+id/peso_setting"
+                                android:layout_width="400dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:min="1"
+                                android:max="5"
+
+                                android:padding="10dp"/>
+
+                            <TextView
+                                android:id="@+id/peso_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textSize="15sp"
+                                android:padding="10dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearPeso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Compreso fra: "
+                                android:textSize="17dp"
+                                android:padding="10dp"/>
+
+                            <EditText
+                                android:id="@+id/peso_lower_bound"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" e "
+                                android:textSize="17dp"/>
+                            <EditText
+                                android:id="@+id/peso_upper_bound"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Monitora il peso "
+                                android:textSize="17dp"
+                                android:padding="10dp"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                >
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="da "
+                                        android:textSize="17dp"/>
+
+                                    <TextView
+                                        android:id="@+id/peso_begin_date"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="dd/mm/yyy"
+                                        android:textSize="17dp"
+                                        android:padding="10dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="  a "
+                                        android:textSize="17dp"/>
+
+                                    <TextView
+                                        android:id="@+id/peso_end_date"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="dd/mm/yyy"
+                                        android:textSize="17dp"
+                                        android:padding="10dp"
+                                        />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!-- FINE SETTINGS -->
+
+
+            </LinearLayout>
+
+                <!-- BUTTONS: SAVE - CANCEL -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+                    <Button
+                        android:id="@+id/saveSettings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:text="Update"
+                        android:onClick="updateSettings"/>
+
+                    <Button
+                        android:id="@+id/cancelSettings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_margin="20dp"
+                        android:text="Cancel"
+                        android:onClick="cancelSettings"/>
+                </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
