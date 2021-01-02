@@ -1,0 +1,18 @@
+<resources>
+    <string-array name="importance_entries">
+        <item>Uno</item>
+        <item>Due</item>
+        <item>Tre</item>
+        <item>Quattro</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="importance_values">
+        <item>set_uno</item>
+        <item>set_due</item>
+        <item>set_tre</item>
+        <item>set_quattro</item>
+        <item>set_cinque</item>
+    </string-array>
+
+</resources>

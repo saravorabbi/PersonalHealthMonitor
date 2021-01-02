@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Personal Health Monitor</string>
+
+    <string name="no_report">no report</string>
+    <string name="title_activity_graph">GraphActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_settings">Impostazioni</string>
+    <string name="title_activity_filter">Filtri</string>
+    <string name="title_activity_remind_later">Rimanda Notifica</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="clicca_per_aggiungere_un_report">Clicca per aggiungere un report!</string>
+    <string name="inserito">Inserito</string>
+    <string name="seleziona_un_giorno">Seleziona un giorno</string>
+    <string name="temperatura">Temperatura</string>
+    <string name="c_calendar">°C</string>
+    <string name="sistolica">Sistolica</string>
+    <string name="mmhg_calendar">mmHg</string>
+    <string name="diastolica">Diastolica</string>
+    <string name="glicemia">Glicemia</string>
+    <string name="mg_dl_calendar">mg/dl</string>
+    <string name="peso">Peso</string>
+    <string name="kg_calendar">kg</string>
+    <string name="report">Report</string>
+    <string name="report_giornalieri">Report giornalieri</string>
+    <string name="nd">-ND</string>
+    <string name="seleziona_l_importanza_dei_report_da_mostrare">Seleziona l\'importanza dei report da mostrare</string>
+    <string name="data_inizio">Data Inizio:</string>
+    <string name="data_fine">Data Fine:</string>
+    <string name="oggi">Oggi</string>
+    <string name="mostra_i_report">Mostra i report</string>
+    <string name="importanza_report">Importanza Report:</string>
+    <string name="_1">1</string>
+    <string name="temperatura_edit">Temperatura:</string>
+    <string name="pressione_sistolica_edit">Pressione Sistolica:</string>
+    <string name="pressione_diastolica_edit">Pressione Diastolica:</string>
+    <string name="glicemia_edit">Glicemia:</string>
+    <string name="peso_edit">Peso:</string>
+    <string name="nota_edit">Nota:</string>
+    <string name="aggiorna">Aggiorna</string>
+    <string name="cancella">Cancella</string>
+    <string name="line_chart">Line Chart</string>
+    <string name="bar_chart">Bar Chart</string>
+    <string name="ciao_oggi_hai_aggiunto_n_report">Ciao! Oggi hai aggiunto n report</string>
+    <string name="impostazioni">Impostazioni</string>
+    <string name="filtri">Filtri</string>
+    <string name="grafici">Grafici</string>
+    <string name="calendario">Calendario</string>
+    <string name="pressione_sistolica">Pressione Sistolica</string>
+    <string name="pressione_diastolica">Pressione Diastolica</string>
+    <string name="indice_glicemico">Indice Glicemico</string>
+    <string name="nota">Nota</string>
+    <string name="salva">Salva</string>
+    <string name="scegli_l_orario_di_notifica">Scegli l\'orario di notifica!</string>
+    <string name="_09_00">09:00</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="notifiche">Notifiche</string>
+    <string name="daily_notifications">Daily notifications</string>
+    <string name="togglebutton">ToggleButton</string>
+    <string name="note">Note</string>
+    <string name="edit">Modifica</string>
+</resources>
